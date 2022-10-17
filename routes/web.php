@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\post;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +22,7 @@ Route::get('/sample', function () {
     return view('sample');
 });
 
-Route::get('/test', App\Http\Controllers\postsContoroller::class);
+// Route::get('/posts', App\Http\Controllers\postsContoroller::class);
+
+// postモデル取得
+Route::get('/posts', [post::class, 'index']);

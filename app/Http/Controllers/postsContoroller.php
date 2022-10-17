@@ -14,10 +14,14 @@ class postsContoroller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function __invoke(Request $request)
-    {
-        $test = PostModel::all();
-        dd($test);
+    // public function __invoke(Request $request)
+    // {
+    //     $contents = PostModel::all();
+    //     // dd($test);
+    //     return view('post')
+    //             ->with('contents', $contents);
 
-    }
+    // }
+
+
 }
