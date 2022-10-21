@@ -17,7 +17,6 @@ class postsContoroller extends Controller
     // public function __invoke(Request $request)
     // {
     //     $contents = PostModel::all();
-    //     // dd($test);
     //     return view('post')
     //             ->with('contents', $contents);
 

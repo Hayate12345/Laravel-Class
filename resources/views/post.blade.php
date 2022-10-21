@@ -10,7 +10,7 @@
 
 <body>
     <h1>取得</h1>
-    @foreach ($contents as $content)
+    @foreach ($con as $content)
         <div>
             <hr>
             <p><label>名前：</label>{{ $content->id }}</p>
