@@ -14,10 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('posts', function (Blueprint $table) {
-            $table->unsignedBigInteger('id', true);
-            $table->unsignedBigInteger('user_id');
+            $table->id();
+            $table->foreignId('user_id');
             $table->char('name', 255);
-            $table->text('text');
+            $table->text('content');
             $table->timestamps();
         });
     }

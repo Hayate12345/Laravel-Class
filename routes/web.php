@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\post;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\commentController;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +24,11 @@ Route::get('/sample', function () {
     return view('sample');
 });
 
-// Route::get('/posts', App\Http\Controllers\postsContoroller::class);
+// postテーブル表示
+Route::get('/posts', [PostController::class, 'index']);
 
-// postモデル取得
-Route::get('/posts', [post::class, 'index']);
+// テスト用
+Route::get('/test', [PostController::class, 'onePost']);
+
+// コメント表示
+Route::get('/comment', [commentController::class, 'comment_list']);
